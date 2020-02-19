@@ -1,14 +1,26 @@
-var VideoListEntry = () => (
-  <div className="video-list-entry media">
-    <div className="media-left media-middle">
-      <img className="media-object" src="https://i.ytimg.com/vi/1w8Z0UOXVaY/default.jpg" alt="" />
-    </div>
-    <div className="media-body">
-      <div className="video-list-entry-title">Video Title</div>
-      <div className="video-list-entry-detail">Video Description</div>
-    </div>
-  </div>
-);
+// declare a new class component named "VideoListEntry" extending the React.Components methodds
+class VideoListEntry extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render () {
+    return (
+      <div className="video-list-entry media">
+        <div className="media-left media-middle">
+          <img className="media-object" src={this.props.video.thumbnails.default.url} alt="" />
+        </div>
+        <div className="media-body">
+          <div className="video-list-entry-title">{this.props.video.title}</div>
+          <div className="video-list-entry-detail">{this.props.video.description}</div>
+        </div>
+      </div>
+    );
+  }
+}
+// will return the markup below
+
+// successfully access props
+
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
