@@ -16,7 +16,7 @@ var App = () => (
     <div className="row">
       <div className="col-md-7">
         <div>
-          <VideoPlayer />
+          <VideoPlayer video={exampleVideoData[0]}/>
         </div>
       </div>
       <div className="col-md-5">
