@@ -1,11 +1,4 @@
-// declare a new class component named "VideoListEntry" extending the React.Components methodds
-// class VideoListEntry extends React.Component {
-//   constructor(props) {
-//     super(props);
-//   }
-//   //{this.props.video.thumbnails.default.url}
-//   render () {
-//     return (
+
 var VideoListEntry = (props) => (
   <div className="video-list-entry media">
     <div className="media-left media-middle">
@@ -17,9 +10,6 @@ var VideoListEntry = (props) => (
     </div>
   </div>
 );
-// will return the markup below
-
-// successfully access props
 
 
 // PropTypes tell other developers what `props` a component expects

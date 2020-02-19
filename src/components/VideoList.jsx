@@ -1,12 +1,8 @@
 import VideoListEntry from './VideoListEntry.js';
-// import exampleVideoData from '../data/exampleVideoData.js';
-// refactor 5 individual modules to map input data's single video obj into the VideoListEntry class component
 
 var VideoList = (props) => (
   <div className="video-list">
-    <div>
-      {props.videos.map(video => <VideoListEntry video={video}/>)}
-    </div>
+    {props.videos.map(video => <VideoListEntry video={video}/>)}
   </div>
 );
 
