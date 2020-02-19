@@ -7,6 +7,16 @@ import exampleVideoData from '../data/exampleVideoData.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      video: exampleVideoData[0],
+      videos: exampleVideoData
+    };
+  }
+
+  onTitleClick (index) {
+    this.setState({
+      video: exampleVideoData[index]
+    });
   }
 
   render() {
@@ -23,12 +33,12 @@ class App extends React.Component {
         <div className="row">
           <div className="col-md-7">
             <div>
-              <VideoPlayer video={exampleVideoData[0]}/>
+              <VideoPlayer video={this.state.video}/>
             </div>
           </div>
           <div className="col-md-5">
             <div>
-              <VideoList videos={exampleVideoData}/>
+              <VideoList videos={this.state.videos} onTitleClick={this.onTitleClick.bind(this)}/>
             </div>
           </div>
         </div>
